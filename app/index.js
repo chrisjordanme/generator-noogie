@@ -64,15 +64,15 @@ module.exports = generators.Base.extend({
       name: 'features',
       message: 'What more would you like?',
       choices: [{
-        name: 'Sass',
+        name: 'Sass (Recommended for Noogie)',
         value: 'includeSass',
         checked: true
       }, {
-        name: 'Bootstrap',
+        name: 'Bootstrap (Recommended for Noogie)',
         value: 'includeBootstrap',
         checked: true
       }, {
-        name: 'Modernizr',
+        name: 'Modernizr (Recommended for Noogie)',
         value: 'includeModernizr',
         checked: true
       }]

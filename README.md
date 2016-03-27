@@ -1,9 +1,11 @@
-# Web app generator [![Build Status](https://secure.travis-ci.org/yeoman/generator-gulp-webapp.svg?branch=master)](http://travis-ci.org/yeoman/generator-gulp-webapp)
+# Noogie Generator - A new way to "NG"!
 
-> [Yeoman](http://yeoman.io) generator that scaffolds out a front-end web app using [gulp](http://gulpjs.com/) for the build process
+> [Yeoman](http://yeoman.io) generator that scaffolds out Angular application based on a component-based architecture
 
-![](screenshot.png)
+## Noogie Fundamentals
+Noogie was created to help developers build Angular 1.5+ applications using a component-based architecture similar to Angular 2.0.
 
+Noogie doesn't currently have an option for building Angular 2.0 apps, yet. Noogie is new, and the short-term goal is to simply aid developers in building component-based applications with what's available in Angular 1.5. Noogie scaffolds apps based on the concept of "root" and "nested" components. Below you will find a getting started guide and a list of available generators. 
 
 ## Features
 
