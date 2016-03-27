@@ -1,10 +1,10 @@
 {
   "name": "generator-noogie",
-  "version": "1.0.3",
-  "description": "Scaffold out a front-end web app",
+  "version": "0.1.1",
+  "description": "Scaffold out an Angular app using a component-based approach",
   "license": "BSD",
-  "repository": "yeoman/generator-gulp-webapp",
-  "author": "The Yeoman Team",
+  "repository": "chrisjordanme/generator-noogie",
+  "author": "Chris Jordan",
   "main": "app/index.js",
   "engines": {
     "node": ">=0.10.0",
@@ -17,6 +17,8 @@
     "app"
   ],
   "keywords": [
+    "angular",
+    "components",
     "yeoman-generator",
     "web",
     "app",
