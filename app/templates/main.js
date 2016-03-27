@@ -5,8 +5,6 @@ var <%= appName %> = (function (<%= appName %>) {
     return <%= appName %>;
 })(<%= appName %> || {});
 
-<%= appName %>.ngAppName = '<%= appName %>';
-
 var noogieApp = {} || window.noogieApp;
 noogieApp.ngAppName = '<%= appName %>';
 
@@ -14,5 +12,19 @@ noogieApp.ngAppName = '<%= appName %>';
 /*global angular*/
 
 (function (angular) {
-    angular.module(<%= appName %>.ngAppName, []);
+
+    <%= appName %>.ngRoutes = ['$routeProvider', function ($routeProvider) {
+        $routeProvider.
+            when('/', {
+                templateUrl: 'routes/main.html'
+            }).
+            when('/about', {
+                templateUrl: 'routes/about.html'
+            }).
+            otherwise('/')
+    }];
+
+    angular.module(<%= appName %>.ngAppName, ['ngRoute'])
+        .config(<%= appName %>.ngRoutes);
+
 })(angular);

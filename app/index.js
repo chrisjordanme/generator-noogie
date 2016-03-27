@@ -182,7 +182,9 @@ module.exports = generators.Base.extend({
       if (this.includeModernizr) {
         bowerJson.dependencies['modernizr'] = '~2.8.1';
         // todo-cj - here... make this dynamic
+        // todo-cj - this is totally in the wrong place. oops.
         bowerJson.dependencies['angular'] = '^1.5.0';
+        bowerJson.dependencies['angular-route'] = '^1.5.2';
       }
 
       this.fs.writeJSON('bower.json', bowerJson);
@@ -258,9 +260,20 @@ module.exports = generators.Base.extend({
       }
 
       this.fs.copyTpl(
+          this.templatePath('routes/about.html'),
+          this.destinationPath('app/routes/about.html')
+      );
+
+      this.fs.copyTpl(
+          this.templatePath('routes/main.html'),
+          this.destinationPath('app/routes/main.html')
+      );
+
+      this.fs.copyTpl(
         this.templatePath('index.html'),
         this.destinationPath('app/index.html'),
         {
+          appName: this.appName,
           appname: this.appname,
           includeSass: this.includeSass,
           includeBootstrap: this.includeBootstrap,
