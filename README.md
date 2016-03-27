@@ -1,11 +1,13 @@
-# Noogie Generator - A new way to "NG"!
+# Noogie Generator - The new way to "NG"
 
-> [Yeoman](http://yeoman.io) generator that scaffolds out Angular application based on a component-based architecture
+> [Yeoman](http://yeoman.io) generator that scaffolds out Angular applications using a component-based architecture
 
 ## Noogie Fundamentals
-Noogie was created to help developers build Angular 1.5+ applications using a component-based architecture similar to Angular 2.0.
+Noogie was created to help developers build Angular 1.5+ applications using a component-based approach similar to the forthcoming [Angular 2.0](https://angular.io/).
 
-Noogie doesn't currently have an option for building Angular 2.0 apps, yet. Noogie is new, and the short-term goal is to simply aid developers in building component-based applications with what's available in Angular 1.5. Noogie scaffolds apps based on the concept of "root" and "nested" components. Below you will find a getting started guide and a list of available generators. 
+Now, Noogie doesn't currently have an option for building Angular 2.0 apps, yet. Noogie is new, and the short-term goal is to simply aid developers in building component-based applications with what's available in Angular 1.5. 
+
+Noogie scaffolds apps based on the concept of "root" and "nested" components. Below you will find a getting started guide with additional details and a list of available generators.
 
 ## Features
 
