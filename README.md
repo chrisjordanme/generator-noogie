@@ -1,72 +1,43 @@
-# Noogie Generator - The new way to "NG"
+# Noogie Generator - Component-based Angular applications
 
-> [Yeoman](http://yeoman.io) generator that scaffolds out Angular applications using a component-based architecture
-
-## Noogie Fundamentals
-Noogie was created to help developers build Angular 1.5+ applications using a component-based approach similar to the forthcoming [Angular 2.0](https://angular.io/).
-
-Now, Noogie doesn't currently have an option for building Angular 2.0 apps, yet. Noogie is new, and the short-term goal is to simply aid developers in building component-based applications with what's available in Angular 1.5. 
-
-Noogie scaffolds apps based on the concept of "root" and "nested" components. Below you will find a getting started guide with additional details and a list of available generators.
-
-## Features
-
-Please see our [gulpfile](app/templates/gulpfile.babel.js) for up to date information on what we support.
-
-* CSS Autoprefixing
-* Built-in preview server with BrowserSync
-* Automagically compile Sass with [libsass](http://libsass.org)
-* Automagically lint your scripts
-* Map compiled CSS to source stylesheets with source maps
-* Awesome image optimization
-* Automagically wire-up dependencies installed with [Bower](http://bower.io)
-* The gulpfile makes use of [ES2015 features](https://babeljs.io/docs/learn-es2015/) by using [Babel](https://babeljs.io)
-
-*For more information on what this generator can do for you, take a look at the [gulp plugins](app/templates/_package.json) used in our `package.json`.*
-
-
-## libsass
-
-Keep in mind that libsass is feature-wise not fully compatible with Ruby Sass. Check out [this](http://sass-compatibility.github.io) curated list of incompatibilities to find out which features are missing.
-
-If your favorite feature is missing and you really need Ruby Sass, you can always switch to [gulp-ruby-sass](https://github.com/sindresorhus/gulp-ruby-sass) and update the `styles` task in gulpfile accordingly.
-
+> [Yeoman](http://yeoman.io) generator that scaffolds out Angular apps using a component-based architecture
 
 ## Getting Started
 
 - Install dependencies: `npm install --global yo gulp bower`
-- Install the generator: `npm install --global generator-gulp-webapp`
-- Run `yo gulp-webapp` to scaffold your webapp
+- Install the generator: `npm install --global generator-noogie`
+- Run `yo noogie` to scaffold your webapp
 - Run `gulp serve` to preview and watch for changes
 - Run `bower install --save <package>` to install frontend dependencies
-- Run `gulp serve:test` to run the tests in the browser
-- Run `gulp` to build your webapp for production
-- Run `gulp serve:dist` to preview the production build
+- Run `gulp` to build your webapp for production * This is currently not working completely
+- Run `gulp serve:dist` to preview the production build * This is currently not working completely
 
+## Noogie Fundamentals
+Noogie was created to help developers build Angular 1.5+ applications using a component-based approach similar to the forthcoming [Angular 2.0](https://angular.io/).
+
+Noogie doesn't currently have an option for building Angular 2.0 apps... yet. Noogie is new and the short-term goal is to aid developers in building component-based applications with what's available in Angular 1.5 and to help developers start working in a component-based way to help enhance understanding the component-based approach in Angular 2.0. Incorporating Angular 2.0 with Noogie is one of the next things on the project roadmap. 
+
+The generator scaffolds applications based on the concept of "root" and "nested" components. Details on this coming soon.
+
+A Directive Component bundle contains HTML, Sass, Controller and Directive files.
+
+Angular 1.5 Component bundles contain HTML, Sass and Component files.
+
+## Available Generators
+- `yo noogie:directive` Builds a directive component bundle
+- `yo noogie:component` Builds an Angular 1.5 component bundle
+- `yo noogie:controller` Builds an Angular 1.5 component bundle
+- `yo noogie:factory` Builds an Angular service (factory)
+- `yo noogie:service` Builds an Angular service
 
 ## Docs
-
 * [getting started](docs/README.md) with this generator
-* [recipes](docs/recipes/README.md) for integrating other popular technologies like CoffeeScript
-* [details](docs/bower.md) about our Bower setup
 
-
-## Options
-
-- `--skip-welcome-message`
-  Skips Yeoman's greeting before displaying options.
-- `--skip-install-message`
-  Skips the the message displayed after scaffolding has finished and before the dependencies are being installed.
-- `--skip-install`
-  Skips the automatic execution of `bower` and `npm` after scaffolding has finished.
-- `--test-framework=<framework>`
-  Either `mocha` or `jasmine`. Defaults to `mocha`.
-
+## Known Issues
 
 ## Contribute
 
 See the [contributing docs](contributing.md).
-
 
 ## License
 
