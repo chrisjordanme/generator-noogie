@@ -24,7 +24,7 @@ noogieApp.ngAppName = '<%= appName %>';
             otherwise('/')
     }];
 
-    angular.module(<%= appName %>.ngAppName, ['ngRoute'])
+    angular.module(noogieApp.ngAppName, ['ngRoute'])
         .config(<%= appName %>.ngRoutes);
 
 })(angular);

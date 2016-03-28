@@ -1,13 +1,13 @@
 (function (angular) {
 
-    var uo<%= cmpCamelCap %> = {
+    var <%= cmpCamel %> = {
         templateUrl: 'components/<%= cmpName %>/<%= cmpName %>.html',
         bindings: {
 
         }
     };
 
-    angular.module(noogieAppName.ngAppName)
-        .component('uo<%= cmpCamelCap %>', uo<%= cmpCamelCap %>);
+    angular.module(noogieApp.ngAppName)
+        .component('<%= cmpCamel %>', <%= cmpCamel %>);
 
 })(angular);

@@ -1,0 +1,15 @@
+.noogie-nav {
+  li {
+    float: left;
+    margin-right: 30px;
+    list-style: none;
+  }
+
+  nav, ul {
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+  }
+}
