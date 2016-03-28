@@ -58,7 +58,7 @@ module.exports = generators.Base.extend({
     var prompts = [{
         type: 'input',
         name: 'appName',
-        message: 'What is the name of your app?'
+        message: 'What is the name of your app? (camelCase)'
       }, {
       type: 'checkbox',
       name: 'features',
@@ -259,6 +259,8 @@ module.exports = generators.Base.extend({
         }
       }
 
+      // todo-cj : The following is ugly, I know.... Need to learn how copyTpl works with (or doesnt) globs. Or see if there is another method to copy all the templates.
+      // cowboy coding this to get it out the door..
       this.fs.copyTpl(
           this.templatePath('routes/about.html'),
           this.destinationPath('app/routes/about.html')
@@ -268,6 +270,74 @@ module.exports = generators.Base.extend({
           this.templatePath('routes/main.html'),
           this.destinationPath('app/routes/main.html')
       );
+
+      this.fs.copyTpl(
+          this.templatePath('components/about-me/about-me.html'),
+          this.destinationPath('app/components/about-me/about-me.html')
+      );
+      this.fs.copyTpl(
+          this.templatePath('components/about-me/about-me.scss'),
+          this.destinationPath('app/components/about-me/about-me.scss')
+      );
+      this.fs.copyTpl(
+          this.templatePath('components/about-me/about-me-controller.js'),
+          this.destinationPath('app/components/about-me/about-me-controller.js')
+      );
+      this.fs.copyTpl(
+          this.templatePath('components/about-me/about-me-directive.js'),
+          this.destinationPath('app/components/about-me/about-me-directive.js')
+      );
+
+      this.fs.copyTpl(
+          this.templatePath('components/hello-world/hello-world.html'),
+          this.destinationPath('app/components/hello-world/hello-world.html')
+      );
+
+      this.fs.copyTpl(
+          this.templatePath('components/hello-world/hello-world.scss'),
+          this.destinationPath('app/components/hello-world/hello-world.scss')
+      );
+
+      this.fs.copyTpl(
+          this.templatePath('components/hello-world/hello-world-controller.js'),
+          this.destinationPath('app/components/hello-world/hello-world-controller.js')
+      );
+
+      this.fs.copyTpl(
+          this.templatePath('components/hello-world/hello-world-directive.js'),
+          this.destinationPath('app/components/hello-world/hello-world-directive.js')
+      );
+
+      this.fs.copyTpl(
+          this.templatePath('components/my-name/my-name.html'),
+          this.destinationPath('app/components/my-name/my-name.html')
+      );
+
+      this.fs.copyTpl(
+          this.templatePath('components/my-name/my-name.scss'),
+          this.destinationPath('app/components/my-name/my-name.scss')
+      );
+
+      this.fs.copyTpl(
+          this.templatePath('components/my-name/my-name-component.js'),
+          this.destinationPath('app/components/my-name/my-name-component.js')
+      );
+
+      this.fs.copyTpl(
+          this.templatePath('components/noogie-nav/noogie-nav.html'),
+          this.destinationPath('app/components/noogie-nav/noogie-nav.html')
+      );
+
+      this.fs.copyTpl(
+          this.templatePath('components/noogie-nav/noogie-nav.scss'),
+          this.destinationPath('app/components/noogie-nav/noogie-nav.scss')
+      );
+
+      this.fs.copyTpl(
+          this.templatePath('components/noogie-nav/noogie-nav-component.js'),
+          this.destinationPath('app/components/noogie-nav/noogie-nav-component.js')
+      );
+      // endKludge...
 
       this.fs.copyTpl(
         this.templatePath('index.html'),

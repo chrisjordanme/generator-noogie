@@ -29,6 +29,7 @@
     <% if (includeBootstrap) { %>
 
     <div class="container">
+      <noogie-nav></noogie-nav>
       <ng-view><!-- Angular Routes --></ng-view>
     </div>
 
@@ -61,10 +62,16 @@
 
     <!-- factories:scripts -->
 
+    <script src="components/hello-world/hello-world-controller.js"></script>
+    <script src="components/about-me/about-me-controller.js"></script>
     <!-- controllers:scripts -->
 
+    <script src="components/my-name/my-name-component.js"></script>
+    <script src="components/noogie-nav/noogie-nav-component.js"></script>
     <!-- component:scripts -->
 
+    <script src="components/hello-world/hello-world-directive.js"></script>
+    <script src="components/about-me/about-me-directive.js"></script>
     <!-- directive:scripts -->
     <!-- endbuild -->
   </body>
