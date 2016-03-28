@@ -14,7 +14,11 @@
     "test": "mocha --reporter spec"
   },
   "files": [
-    "app"
+    "app",
+    "generators/component",
+    "generators/controller",
+    "generators/directive",
+    "generators/factory"
   ],
   "keywords": [
     "angular",
