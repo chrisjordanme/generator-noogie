@@ -34,7 +34,7 @@ module.exports = generators.Base.extend({
         factory: function () {
             this.fs.copyTpl(
                 this.templatePath('factory.js'),
-                this.destinationPath('app/scripts/services/' + this.name + '-factory.js'),
+                this.destinationPath('app/services/' + this.name + '-factory.js'),
                 {
                     cmpName: this.name,
                     cmpCamel:  this.name.replace(/-([a-z])/g, function (g) { return g[1].toUpperCase(); }),
