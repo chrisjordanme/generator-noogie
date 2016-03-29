@@ -1,5 +1,5 @@
 var generators = require('yeoman-generator');
-var utils = require('../../utils.js');
+var noogieUtils = require('./../../utils.js');
 var fileSync = require('fs');
 
 // todo-cj : move to utils..
@@ -42,7 +42,7 @@ module.exports = generators.Base.extend({
                 }
             );
 
-            utils.rewriteFile({
+            noogieUtils.rewriteFile({
                 file: 'app/index.html',
                 needle: '<!-- controllers:scripts -->',
                 splicable: [

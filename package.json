@@ -1,6 +1,6 @@
 {
   "name": "generator-noogie",
-  "version": "0.1.6",
+  "version": "0.3.2",
   "description": "Scaffold out an Angular app using a component-based approach",
   "license": "BSD",
   "repository": "chrisjordanme/generator-noogie",
@@ -18,7 +18,8 @@
     "generators/component",
     "generators/controller",
     "generators/directive",
-    "generators/factory"
+    "generators/factory",
+    "utils.js"
   ],
   "keywords": [
     "angular",
@@ -45,6 +46,7 @@
   },
   "devDependencies": {
     "fs": "0.0.2",
-    "mocha": "*"
+    "mocha": "*",
+    "path": "^0.12.7"
   }
 }

@@ -1,5 +1,5 @@
 var generators = require('yeoman-generator');
-var utils = require('../../utils.js');
+var noogieUtils = require('./../../utils.js');
 var fileSync = require('fs');
 
 
@@ -42,7 +42,7 @@ module.exports = generators.Base.extend({
                 }
             );
 
-            utils.rewriteFile({
+            noogieUtils.rewriteFile({
                 file: 'app/index.html',
                 needle: '<!-- component:scripts -->',
                 splicable: [
@@ -73,7 +73,7 @@ module.exports = generators.Base.extend({
                 }
             );
 
-            utils.rewriteFile({
+            noogieUtils.rewriteFile({
                 file: 'app/styles/main.scss',
                 needle: '//-- component:scripts -->',
                 splicable: [

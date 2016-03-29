@@ -372,6 +372,8 @@ module.exports = generators.Base.extend({
       mkdirp('app/images');
       mkdirp('app/fonts');
     }
+
+
   },
 
   install: function () {
