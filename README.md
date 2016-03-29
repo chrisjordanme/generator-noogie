@@ -1,8 +1,8 @@
-# Noogie Generator - Component-based Angular applications
+# Noogie Generator - Component-based Angular
 
-> [Yeoman](http://yeoman.io) generator that scaffolds out Angular apps using a component-based architecture
+> A [Yeoman](http://yeoman.io) generator that scaffolds out Angular apps using a component-based architecture
 
-## Getting Started
+## Installation & Getting Started
 
 - Install dependencies: `npm install --global yo gulp bower`
 - Install the generator: `npm install --global generator-noogie`
@@ -15,30 +15,20 @@
 ## Noogie Fundamentals
 Noogie was created to help developers build Angular 1.5+ applications using a component-based approach similar to the forthcoming [Angular 2.0](https://angular.io/).
 
-Noogie doesn't currently have an option for building Angular 2.0 apps... yet. Noogie is new and the short-term goal is to aid developers in building component-based applications with what's available in Angular 1.5 and to help developers start working in a component-based way to help enhance understanding the component-based approach in Angular 2.0. Incorporating Angular 2.0 with Noogie is one of the next things on the project roadmap. 
+Noogie doesn't currently have an option for building Angular 2.0 apps... yet. Noogie is new and the short-term goal is to help developers build component-based applications with what's available today in Angular 1.5. Incorporating Angular 2.0 with Noogie is definitely on the project roadmap. 
 
-The generator scaffolds applications based on the concept of "root" and "nested" components. Details on this coming soon.
+The generator scaffolds applications based on the concept of "root" and "nested" components. Supporting details are coming soon but the project was inspired by [this article](http://teropa.info/blog/2015/10/18/refactoring-angular-apps-to-components.html) by [Tero Parviainen](https://twitter.com/teropa).
 
-A Directive Component bundle contains HTML, Sass, Controller and Directive files.
-
-Angular 1.5 Component bundles contain HTML, Sass and Component files.
+The generator scaffolds Angular apps using Angular 1.5 Components and Directive Components. Think of these as "component bundles". Each bundle is generated with it's own HTML, Sass, and Component or Directive/Controller files. Use of ng-controller and binding controllers to routes is not recommended.
 
 ## Available Generators
-- `yo noogie:directive` Builds a directive component bundle
-- `yo noogie:component` Builds an Angular 1.5 component bundle
-- `yo noogie:controller` Builds an Angular 1.5 component bundle
-- `yo noogie:factory` Builds an Angular service (factory)
-- `yo noogie:service` Builds an Angular service
-
-## Docs
-* [getting started](docs/README.md) with this generator
-
-## Known Issues
+- `yo noogie:directive` Builds a Directive Component bundle
+- `yo noogie:component` Builds an Angular 1.5 Component bundle
+- `yo noogie:controller` Builds an Angular controller should you need one separately from a component bundle
+- `yo noogie:factory` Builds an Angular factory (services and providers coming soon)
 
 ## Contribute
-
-See the [contributing docs](contributing.md).
+Contributors welcome. Just fork and submit pull requests or contact me directly [@chrisjordanme](http://twitter.com/chrisjordanme)
 
 ## License
-
 [BSD license](http://opensource.org/licenses/bsd-license.php)
