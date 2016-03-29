@@ -12,14 +12,14 @@
 - Run `gulp` to build your webapp for production * This is currently not working completely
 - Run `gulp serve:dist` to preview the production build * This is currently not working completely
 
-## Noogie Fundamentals
+## Fundamentals
 Noogie was created to help developers build Angular 1.5+ applications using a component-based approach similar to the forthcoming [Angular 2.0](https://angular.io/).
 
 Noogie doesn't currently have an option for building Angular 2.0 apps... yet. Noogie is new and the short-term goal is to help developers build component-based applications with what's available today in Angular 1.5. Incorporating Angular 2.0 with Noogie is definitely on the project roadmap. 
 
-The generator scaffolds applications based on the concept of "root" and "nested" components. Supporting details are coming soon but the project was inspired by [this article](http://teropa.info/blog/2015/10/18/refactoring-angular-apps-to-components.html) by [Tero Parviainen](https://twitter.com/teropa).
+The generator scaffolds applications based on the concept of "root" and "nested" components. Supporting details are coming soon but the project was insprired by the new Component API available in Angular 1.5 and the need to move towards component-based development. I also highly recommend reading [this article](http://teropa.info/blog/2015/10/18/refactoring-angular-apps-to-components.html) by [Tero Parviainen](https://twitter.com/teropa).
 
-The generator scaffolds Angular apps using Angular 1.5 Components and Directive Components. Think of these as "component bundles". Each bundle is generated with it's own HTML, Sass, and Component or Directive/Controller files. Use of ng-controller and binding controllers to routes is not recommended.
+Noogie scaffolds Angular apps using Angular 1.5 Components and Directive Components. Think of these as "component bundles". Each bundle is generated with it's own HTML, Sass, and Component or Directive/Controller files. Use of ng-controller and binding controllers to routes is not recommended.
 
 ## Available Generators
 - `yo noogie:directive` Builds a Directive Component bundle
