@@ -46,9 +46,10 @@ Sample Component Bundle (as an Anguar 1.5 Component):
 - `yo noogie:factory` Builds an Angular factory (services and providers coming soon)
 
 ## Features
-- Necessary component bundle files are auto-injected into the index.html
+- Newly genereated component bundle files are auto-injected into the index.html
 - Component Sass partials are auto-imported into a main.scss
 - Includes Sass and Bootstrap
+- It's called Noogie. What's not to love about that?
 
 ## Contribute
 Contributors are welcome. Please use the dev branch and fork/submit pull requests. Approved PR's will be merged into master on a forthcoming release cadence. 
