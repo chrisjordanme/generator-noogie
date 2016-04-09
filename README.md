@@ -21,6 +21,16 @@ The generator scaffolds applications based on the concept of "root" and "nested"
 
 Noogie scaffolds Angular apps using Angular 1.5 Components and Directive Components. Think of these as "component bundles". Each bundle is generated with it's own HTML, Sass, and Component or Directive/Controller files. Use of ng-controller and binding controllers to routes is not recommended.
 
+Sample Component Bundle:
+```
+├── components/
+│   ├── my-new-component
+│   │   ├── my-noogie-component.html
+│   │   ├── my-noogie-component.scss
+|   |   ├── my-noogie-component-controller.js
+|   |   ├── my-noogie-component-directive.js
+```
+
 ## Available Generators
 - `yo noogie:directive` Builds a Directive Component bundle
 - `yo noogie:component` Builds an Angular 1.5 Component bundle
