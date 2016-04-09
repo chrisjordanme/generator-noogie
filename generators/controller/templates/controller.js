@@ -1,7 +1,7 @@
 (function (angular) {
 
     var <%= cmpCamelCap %> = function () {
-        this.name: '<%= cmpName %>';
+        this.name = '<%= cmpName %>';
     };
 
     angular.module(noogieApp.ngAppName)
