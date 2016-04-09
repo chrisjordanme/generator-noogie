@@ -7,7 +7,7 @@
 
 Noogie doesn't have an option for building Angular 2.0 apps yet but it is on the short-term project road map. The project is new and the immediate goal is to help developers build component-based applications with what's available today in Angular 1.5. 
 
-The generator scaffolds applications based on the idea of "root" and "nested" components. Supporting details are coming soon in the [Noogie Blog](http://blog.noogie.io/) but the project was insprired by the new Component API available in Angular 1.5 and the need to move towards component-based development. I also highly recommend reading [this article](http://teropa.info/blog/2015/10/18/refactoring-angular-apps-to-components.html) by [Tero Parviainen](https://twitter.com/teropa).
+The generator scaffolds applications based on the idea of "root" and "nested" components. Supporting details are coming soon in the [Noogie Blog](http://blog.noogie.io/) but the project was insprired by the new Component API available in Angular 1.5 and the need to move towards component-based development. I also strongly recommend reading [this article](http://teropa.info/blog/2015/10/18/refactoring-angular-apps-to-components.html) by [Tero Parviainen](https://twitter.com/teropa).
 
 Noogie scaffolds Angular components two ways, using the new 1.5 Component API and also with traditional Angular Directives. Think of these as "component bundles". Component bundles are generated with their own HTML, Sass, and Component / Directive/Controller files. Use of ng-controller and binding controllers to routes is not recommended but Noogie also has a controller generator for one-off controller needs.
 
