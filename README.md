@@ -1,4 +1,4 @@
-# Noogie Generator - AngularJS Components
+# NooGie - AngularJS Component Generator
 
 Noogie is a [Yeoman](http://yeoman.io) generator that scaffolds out Angular apps using a component-based approach.
 
