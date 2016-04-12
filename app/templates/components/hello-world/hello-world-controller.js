@@ -2,7 +2,7 @@
 
     var HelloWorldCtrl = function () {
         this.componentName = 'hello-world';
-        this.name = 'what?'
+        this.name = 'Noogie'
     };
 
     angular.module(noogieApp.ngAppName)

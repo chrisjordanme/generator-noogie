@@ -50,30 +50,43 @@ module.exports = generators.Base.extend({
   prompting: function () {
     var done = this.async();
 
+    var theNoogie = chalk.cyan("\n") +
+                    chalk.cyan("        _    \,-\,    _") +
+                    chalk.cyan("\n ,--, /: :\\/': :`\\/: :\\ ") +
+                    chalk.cyan("\n|`;  ' `,'   `.;    `: |") +
+                    chalk.cyan("\n|    |     |  '  |     |.") +
+                    chalk.cyan("\n| :  |     | " + chalk.yellow('NG!') + " |     ||") +
+                    chalk.cyan("\n| :. |  :  |  :  |  :  | \\") +
+                    chalk.cyan("\n \\__/: :.. : :.. | :.  |  )") +
+                    chalk.cyan("\n      `---',\\___/,\\___/ /'") +
+                    chalk.cyan("\n           `==.__ .. . /'") +
+                    chalk.cyan("\n                 `-::-'") +
+                    chalk.cyan("\n");
+
+
+    console.log(theNoogie);
+
     if (!this.options['skip-welcome-message']) {
-      this.log(yosay('\'Noogie. The best way to "ng".'));
+      //this.log(yosay('\'Noogie. The best way to "ng".'));
     }
 
     // todo-cj : redo prompts for Angular 1 vs. 2 - right now is automatically including 1.5
+    // todo-cj : gotta make sure things work without these
     var prompts = [{
         type: 'input',
         name: 'appName',
-        message: 'What is the name of your app? (camelCase)'
+        message: 'Name your application: (camelCase)'
       }, {
       type: 'checkbox',
       name: 'features',
-      message: 'What more would you like?',
+      message: 'Sass is required, Bootstrap is optional. Press \"Enter\" to proceed.',
       choices: [{
-        name: 'Sass (Recommended for Noogie)',
+        name: 'Sass (<- Do not deselect)',
         value: 'includeSass',
         checked: true
       }, {
-        name: 'Bootstrap (Recommended for Noogie)',
+        name: 'Bootstrap (Recommended)',
         value: 'includeBootstrap',
-        checked: true
-      }, {
-        name: 'Modernizr (Recommended for Noogie)',
-        value: 'includeModernizr',
         checked: true
       }]
     }, {
@@ -153,6 +166,8 @@ module.exports = generators.Base.extend({
       if (this.includeBootstrap) {
         if (this.includeSass) {
           bowerJson.dependencies['bootstrap-sass'] = '~3.3.5';
+          bowerJson.dependencies['angular'] = '^1.5.0';
+          bowerJson.dependencies['angular-route'] = '^1.5.2';
           bowerJson.overrides = {
             'bootstrap-sass': {
               'main': [
@@ -179,12 +194,9 @@ module.exports = generators.Base.extend({
         bowerJson.dependencies['jquery'] = '~2.1.1';
       }
 
+      // todo-cj : should we keep modernizr?
       if (this.includeModernizr) {
         bowerJson.dependencies['modernizr'] = '~2.8.1';
-        // todo-cj - here... make this dynamic
-        // todo-cj - this is totally in the wrong place. oops.
-        bowerJson.dependencies['angular'] = '^1.5.0';
-        bowerJson.dependencies['angular-route'] = '^1.5.2';
       }
 
       this.fs.writeJSON('bower.json', bowerJson);
