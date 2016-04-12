@@ -2,6 +2,8 @@
 
 Noogie is a [Yeoman](http://yeoman.io) generator that scaffolds out Angular apps using a component-based approach.
 
+![](noogie-screenshot.png)
+
 ## Methodology & Fundamentals
 [Noogie](http://noogie.io) was created to help developers build Angular 1.5+ applications using a component-based approach similar to [Angular 2.0](https://angular.io/) and other component-based frameworks.
 
