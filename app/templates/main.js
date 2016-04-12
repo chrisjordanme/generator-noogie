@@ -1,10 +1,7 @@
+'use strict';
 console.log('\'Allo, Noogie!');
 
-var <%= appName %> = (function (<%= appName %>) {
-    <%= appName %> = {};
-    return <%= appName %>;
-})(<%= appName %> || {});
-
+var <%= appName %> = {} || <%= appName %>;
 var noogieApp = {} || window.noogieApp;
 noogieApp.ngAppName = '<%= appName %>';
 
@@ -21,7 +18,7 @@ noogieApp.ngAppName = '<%= appName %>';
             when('/about', {
                 templateUrl: 'routes/about.html'
             }).
-            otherwise('/')
+            otherwise('/');
     }];
 
     angular.module(noogieApp.ngAppName, ['ngRoute'])
