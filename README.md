@@ -53,6 +53,7 @@ Sample Component Bundle (as an Anguar 1.5 Component):
 
 ## Coming Soon...
 - Angular 2.0 inclusion 
+- An option to specify root or nested components
 - Dynamic module loading (currently, all JS is included in the app)
 - ES2015 style components & modules
 - A prettier start screen following initial generator usage
