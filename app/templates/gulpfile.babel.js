@@ -115,7 +115,8 @@ gulp.task('serve', ['styles', 'fonts'], () => {
   ]).on('change', reload);
 
   gulp.watch('app/**/*.{scss, css}', ['styles']);
-  gulp.watch('app/**/*.js', ['scripts']);
+  // todo-cj : scripts task doesn't exist. Need to go back and resolve
+  //gulp.watch('app/**/*.js', ['scripts']);
   gulp.watch('app/fonts/**/*', ['fonts']);
   gulp.watch('bower.json', ['wiredep', 'fonts']);
 });

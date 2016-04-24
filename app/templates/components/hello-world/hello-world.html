@@ -1,8 +1,24 @@
 <!-- In this example, hello-world is the root component and my-name is nested -->
-<div class="hello-world">
-    {{helloWorld.componentName}}
-    <!-- Look in the components folder for the my-name component bundle -->
+<div class="hello-world row">
+
+    <h1>Welcome to {{helloWorld.appName}}!</h1>
+
+    <p>
+        Thank you for downloading and trying out Noogie! This generator was created to help developers build Angular applications using a component-based approach.
+    </p>
+
+    <p>
+        Be sure to <a href="https://www.npmjs.com/package/generator-noogie">find us on npm</a> and <a href="https://github.com/chrisjordanme/generator-noogie">star us on github</a>! Additional details can also be found on the
+        <a href="http://blog.noogie.io/">Noogie Blog</a>.
+    </p>
+    <hr/>
+    <p>
+        You are looking at the <strong>{{helloWorld.componentName}}</strong> root component bundle. All components & directives are scaffolded into the <strong>app/components</strong> directory.
+    </p>
+
+    <!-- Look in the app/components folder for the my-name component bundle -->
     <my-name
-        name="helloWorld.name"
+        name="'my-name'"
     ></my-name>
+
 </div>

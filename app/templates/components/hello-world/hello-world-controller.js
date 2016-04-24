@@ -1,8 +1,8 @@
 (function (angular) {
 
     var HelloWorldCtrl = function () {
+        this.appName = noogieApp.ngAppName;
         this.componentName = 'hello-world';
-        this.name = 'Noogie'
     };
 
     angular.module(noogieApp.ngAppName)
