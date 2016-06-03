@@ -18,7 +18,7 @@ noogieApp.ngAppName = '<%= appName %>';
             when('/about', {
                 templateUrl: 'routes/about.html'
             }).
-            <!-- route:scripts -->
+            //*** route:scripts
             otherwise('/');
     }];
 
