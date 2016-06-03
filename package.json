@@ -1,6 +1,6 @@
 {
   "name": "generator-noogie",
-  "version": "0.7.2",
+  "version": "0.7.3",
   "description": "Scaffold out an Angular app using a component-based approach",
   "license": "BSD",
   "repository": "chrisjordanme/generator-noogie",
@@ -19,6 +19,8 @@
     "generators/controller",
     "generators/directive",
     "generators/factory",
+    "generators/route",
+    "generators/service",
     "utils.js"
   ],
   "keywords": [
