@@ -70,7 +70,7 @@ module.exports = generators.Base.extend({
                     '                templateUrl: \'routes/' + this.name + '.html\',\n' +
                     '                controller: \'' + capFirst(this.name.replace(/-([a-z])/g, function (g) { return g[1].toUpperCase(); })) + 'Ctrl\',\n' +
                     '                controllerAs: \'' + this.name.replace(/-([a-z])/g, function (g) { return g[1].toLowerCase(); }) + '\'\n' +
-                    '             })'
+                    '             }).'
                 ]
             });
         }
