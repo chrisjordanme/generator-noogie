@@ -66,7 +66,7 @@ module.exports = generators.Base.extend({
                 file: 'app/scripts/main.js',
                 needle: '//*** route:scripts',
                 splicable: [
-                    '.when(\'\/' + this.name + '\', { \n' +
+                    'when(\'\/' + this.name + '\', { \n' +
                     '                templateUrl: \'routes/' + this.name + '.html\',\n' +
                     '                controller: \'' + capFirst(this.name.replace(/-([a-z])/g, function (g) { return g[1].toUpperCase(); })) + 'Ctrl\',\n' +
                     '                controllerAs: \'' + this.name.replace(/-([a-z])/g, function (g) { return g[1].toLowerCase(); }) + '\'\n' +
