@@ -17,8 +17,8 @@ module.exports = generators.Base.extend({
             {
                 type    : 'input',
                 name    : 'name',
-                message : 'Enter the component name',
-                default : 'my-noogie-component'
+                message : 'Enter the name of your new route:',
+                default : 'noogie-route'
             }
         ];
 
@@ -31,10 +31,10 @@ module.exports = generators.Base.extend({
     },
 
     writing: {
-        directive: function () {
+        controller: function () {
             this.fs.copyTpl(
-                this.templatePath('directive.js'),
-                this.destinationPath('app/components/' + this.name + '/' +  this.name + '-directive.js'),
+                this.templatePath('controller.js'),
+                this.destinationPath('app/scripts/controllers/' + this.name + '-controller.js'),
                 {
                     cmpName: this.name,
                     cmpCamel:  this.name.replace(/-([a-z])/g, function (g) { return g[1].toUpperCase(); }),
@@ -44,41 +44,33 @@ module.exports = generators.Base.extend({
 
             noogieUtils.rewriteFile({
                 file: 'app/index.html',
-                needle: '<!-- directive:scripts -->',
+                needle: '<!-- controllers:scripts -->',
                 splicable: [
-                    '\<script src="components/' + this.name + '/' + this.name + '-directive.js"\></script>'
+                    '\<script src="scripts/controllers/' + this.name + '-controller.js"\></script>'
                 ]
             });
-
         },
-        html: function () {
+        route: function () {
             this.fs.copyTpl(
-                this.templatePath('component.html'),
-                this.destinationPath('app/components/' + this.name + '/' +  this.name + '.html'),
+                this.templatePath('route.html'),
+                this.destinationPath('app/routes/' + this.name + '.html'),
                 {
                     cmpName: this.name,
                     cmpCamel:  this.name.replace(/-([a-z])/g, function (g) { return g[1].toUpperCase(); }),
-                    cmpCamelCap: capFirst(this.name.replace(/-([a-z])/g, function (g) { return g[1].toUpperCase(); }))
-                }
-            );
-
-        },
-        css: function () {
-            this.fs.copyTpl(
-                this.templatePath('component.scss'),
-                this.destinationPath('app/components/' + this.name + '/' +  this.name + '.scss'),
-                {
-                    cmpName: this.name,
-                    cmpCamel:  this.name.replace(/-([a-z])/g, function (g) { return g[1].toUpperCase(); }),
-                    cmpCamelCap: capFirst(this.name.replace(/-([a-z])/g, function (g) { return g[1].toUpperCase(); }))
+                    cmpCamelCap: capFirst(this.name.replace(/-([a-z])/g, function (g) { return g[1].toUpperCase(); })),
+                    cmpCamelLow: this.name.replace(/-([a-z])/g, function (g) { return g[1].toLowerCase(); })
                 }
             );
 
             noogieUtils.rewriteFile({
-                file: 'app/styles/main.scss',
-                needle: '//-- component:scripts -->',
+                file: 'app/scripts/main.js',
+                needle: '//*** route:scripts',
                 splicable: [
-                    "@import '../components/" + this.name + "/" + this.name + "';"
+                    '.when(\'\/' + this.name + '\', { \n' +
+                    '                templateUrl: \'routes/' + this.name + '.html\',\n' +
+                    '                controller: \'' + capFirst(this.name.replace(/-([a-z])/g, function (g) { return g[1].toUpperCase(); })) + 'Ctrl\',\n' +
+                    '                controllerAs: \'' + this.name.replace(/-([a-z])/g, function (g) { return g[1].toLowerCase(); }) + '\'\n' +
+                    '             })'
                 ]
             });
         }

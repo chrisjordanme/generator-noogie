@@ -3,8 +3,6 @@
     var directiveName = '<%= cmpCamel %>';
 
     var directiveDefinition = {
-        controller: '<%= cmpCamelCap %>Ctrl',
-        controllerAs: '<%= cmpCamel %>',
         scope: {
             title: '=',
             content: '='

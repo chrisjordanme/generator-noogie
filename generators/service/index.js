@@ -17,8 +17,8 @@ module.exports = generators.Base.extend({
             {
                 type    : 'input',
                 name    : 'name',
-                message : 'Enter the name of your factory:',
-                default : 'noogie-factory'
+                message : 'Enter the name of your service:',
+                default : 'noogie-service'
             }
         ];
 
@@ -33,8 +33,8 @@ module.exports = generators.Base.extend({
     writing: {
         factory: function () {
             this.fs.copyTpl(
-                this.templatePath('factory.js'),
-                this.destinationPath('app/scripts/services/' + this.name + '-factory.js'),
+                this.templatePath('service.js'),
+                this.destinationPath('app/scripts/services/' + this.name + '-service.js'),
                 {
                     cmpName: this.name,
                     cmpCamel:  this.name.replace(/-([a-z])/g, function (g) { return g[1].toUpperCase(); }),
@@ -44,9 +44,9 @@ module.exports = generators.Base.extend({
 
             noogieUtils.rewriteFile({
                 file: 'app/index.html',
-                needle: '<!-- factories:scripts -->',
+                needle: '<!-- services:scripts -->',
                 splicable: [
-                    '\<script src="scripts/services/' + this.name + '-factory.js"\></script>'
+                    '\<script src="scripts/services/' + this.name + '-service.js"\></script>'
                 ]
             });
         }

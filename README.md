@@ -1,25 +1,22 @@
 # NooGie - AngularJS Component Generator
 
-Noogie is a [Yeoman](http://yeoman.io) generator that scaffolds out Angular apps using a component-based approach.
-
 ![](noogie-screenshot.png)
 
 ## Methodology & Fundamentals
-[Noogie](http://noogie.io) was created to help developers build Angular 1.5+ applications using a component-based approach similar to [Angular 2.0](https://angular.io/) and other component-based frameworks.
+[Noogie](http://noogie.io) is a [Yeoman](http://yeoman.io) generator that was created to help developers build Angular 1.5+ applications using a component-first approach.
 
-Noogie doesn't have an option for using Angular 2.0 yet but it is on the immediate project road map. The project is new and the initial goal is to help developers build component-based applications with what's available today in Angular 1.5. 
+What about Angular 2.0? We'll get to that momentarily.
 
-The generator scaffolds applications based on the idea of "root" and "nested" components. Supporting details can be found in the [Noogie Blog](http://blog.noogie.io/). The project was insprired by the new Component API available in Angular 1.5 and the need to move towards component-based development. I also highly recommend [this article](http://teropa.info/blog/2015/10/18/refactoring-angular-apps-to-components.html) by [Tero Parviainen](https://twitter.com/teropa) which helped influence Noogie's design decisions.
+The generator scaffolds "component bundles". These bundles contain the HTML, CSS and (Directive/Component) JS files that make up Angular "components". This leads to a more manageable and reusable codebase and will help developers begin paving the way for Angular 2.0 adoption.
 
-Noogie scaffolds Angular components two ways, (1) using the new 1.5 Component API or also with (2) traditional Angular Directives. Think of these as "component bundles". Component bundles are generated with their own HTML, Sass, and Component / Directive/Controller files. Use of ng-controller and binding controllers to routes is not recommended, though there is a controller generator for any one-off controller needs.
+Noogie scaffolds Angular components in one of two ways, (1) using the new 1.5 Component API or also using (2) traditional Angular Directives.
 
-Sample Component Bundle (as a Directive):
+Sample Component Bundle (as a traditional Directive):
 ```
 ├── components/
-│   ├── my-noogie-component
+│   ├── my-noogie-directive
 │   │   ├── my-noogie-component.html
 │   │   ├── my-noogie-component.scss
-│   │   ├── my-noogie-controller.js
 │   │   ├── my-noogie-directive.js
 ```
 Sample Component Bundle (as an Anguar 1.5 Component):
@@ -30,6 +27,8 @@ Sample Component Bundle (as an Anguar 1.5 Component):
 │   │   ├── my-noogie-component.scss
 │   │   ├── my-noogie-component-component.js
 ```
+
+Noogie does not yet support Angular 2.0. The short-term goal of this project is to build Angular 1.x projects in a way that provides an upgrade path in accordance with [Angular's incremental hybrid approach to upgrading](https://angular.io/docs/ts/latest/guide/upgrade.html). Though there is some work and fundamental understanding that needs to occur before this can happen. But work is underway.
 
 ## Installation & Getting Started
 
@@ -44,8 +43,10 @@ Sample Component Bundle (as an Anguar 1.5 Component):
 ## Available Generators
 - `yo noogie:directive` Builds a Directive Component bundle
 - `yo noogie:component` Builds an Angular 1.5 Component bundle
-- `yo noogie:controller` Builds an Angular controller should you need one separately from a component bundle
-- `yo noogie:factory` Builds an Angular factory (services and providers coming soon)
+- `yo noogie:controller` Builds an Angular controller
+- `yo noogie:factory` Builds an Angular factory 
+- `yo noogie:service` Builds an Angular service
+- `yo noogie:route` Stubs out an HTML template file, automatically writes the new route into the main.js router, links the HTML and creates a corresponding controller
 
 ## Features
 - Newly genereated component bundle files are auto-injected into the index.html
@@ -54,16 +55,12 @@ Sample Component Bundle (as an Anguar 1.5 Component):
 - It's called Noogie. What's not to love about that?
 
 ## Coming Soon...
-- Angular 2.0 inclusion 
-- An option to specify root or nested components
 - Dynamic module loading (currently, all JS is included in the app)
-- ES2015 style components & modules
-- A prettier start screen following initial generator usage
+- ES2015 style
+- TypeScript integration
 
 ## Contribute
-Contributors are welcome. Please use the dev branch and fork/submit pull requests. Approved PR's will be merged into master on a forthcoming release cadence. 
-
-Feel free to contact me directly with questions or feedback or to say hello [@chrisjordanme](http://twitter.com/chrisjordanme)
+Contributors are welcome. Please use the dev branch and fork/submit pull requests. Approved PR's will be merged into master on a forthcoming release cadence.
 
 ## License
 [BSD license](http://opensource.org/licenses/bsd-license.php)
