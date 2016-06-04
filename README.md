@@ -49,6 +49,7 @@ The generator uses yeoman, gulp and bower.  If you do not have these dependencie
 - Run  `gulp serve:dist`  to preview the production build
 
 ## Features
+- Follows (very closely) the code conventions found in the Angular endorsed [Angular 1 Style Guide](https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md)
 - Newly generated component bundle files are auto-injected into the index.html
 - Component Sass partials are auto-imported into a main.scss file
 - Includes Sass and Bootstrap (currently Sass is required)
