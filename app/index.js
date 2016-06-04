@@ -271,8 +271,6 @@ module.exports = generators.Base.extend({
         }
       }
 
-      // todo-cj : The following is ugly, I know.... Need to learn how copyTpl works with (or doesnt) globs. Or see if there is another method to copy all the templates.
-      // cowboy coding this to get it out the door..
       this.fs.copyTpl(
           this.templatePath('routes/about.html'),
           this.destinationPath('app/routes/about.html')
@@ -284,6 +282,16 @@ module.exports = generators.Base.extend({
       );
 
       this.fs.copyTpl(
+          this.templatePath('controllers/main-controller.js'),
+          this.destinationPath('app/scripts/controllers/main-controller.js')
+      );
+
+      this.fs.copyTpl(
+          this.templatePath('controllers/about-controller.js'),
+          this.destinationPath('app/scripts/controllers/about-controller.js')
+      );
+
+      this.fs.copyTpl(
           this.templatePath('components/about-me/about-me.html'),
           this.destinationPath('app/components/about-me/about-me.html')
       );
@@ -291,10 +299,7 @@ module.exports = generators.Base.extend({
           this.templatePath('components/about-me/about-me.scss'),
           this.destinationPath('app/components/about-me/about-me.scss')
       );
-      this.fs.copyTpl(
-          this.templatePath('components/about-me/about-me-controller.js'),
-          this.destinationPath('app/components/about-me/about-me-controller.js')
-      );
+
       this.fs.copyTpl(
           this.templatePath('components/about-me/about-me-directive.js'),
           this.destinationPath('app/components/about-me/about-me-directive.js')
@@ -308,11 +313,6 @@ module.exports = generators.Base.extend({
       this.fs.copyTpl(
           this.templatePath('components/hello-world/hello-world.scss'),
           this.destinationPath('app/components/hello-world/hello-world.scss')
-      );
-
-      this.fs.copyTpl(
-          this.templatePath('components/hello-world/hello-world-controller.js'),
-          this.destinationPath('app/components/hello-world/hello-world-controller.js')
       );
 
       this.fs.copyTpl(
@@ -349,7 +349,6 @@ module.exports = generators.Base.extend({
           this.templatePath('components/noogie-nav/noogie-nav-component.js'),
           this.destinationPath('app/components/noogie-nav/noogie-nav-component.js')
       );
-      // endKludge...
 
       this.fs.copyTpl(
         this.templatePath('index.html'),

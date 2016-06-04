@@ -3,10 +3,8 @@
     var directiveName = 'helloWorld';
 
     var directiveDefinition = {
-        controller: 'HelloWorldCtrl',
-        controllerAs: 'helloWorld',
         scope: {
-            // isolate scope bindings
+            appName: '='
         },
         templateUrl: 'components/hello-world/hello-world.html',
         link: function ($scope, element, attrs) {

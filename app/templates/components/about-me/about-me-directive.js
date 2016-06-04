@@ -3,11 +3,8 @@
     var directiveName = 'aboutMe';
 
     var directiveDefinition = {
-        controller: 'AboutMeCtrl',
-        controllerAs: 'aboutMe',
         scope: {
-            title: '=',
-            content: '='
+            name: '='
         },
         templateUrl: 'components/about-me/about-me.html',
         link: function ($scope, element, attrs) {

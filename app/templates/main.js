@@ -13,10 +13,14 @@ noogieApp.ngAppName = '<%= appName %>';
     <%= appName %>.ngRoutes = ['$routeProvider', function ($routeProvider) {
         $routeProvider.
             when('/', {
-                templateUrl: 'routes/main.html'
+                templateUrl: 'routes/main.html',
+                controller: 'MainCtrl',
+                controllerAs: 'main'
             }).
             when('/about', {
-                templateUrl: 'routes/about.html'
+                templateUrl: 'routes/about.html',
+                controller: 'AboutCtrl',
+                controllerAs: 'about'
             }).
             //*** route:scripts
             otherwise('/');
